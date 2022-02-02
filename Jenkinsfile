@@ -21,9 +21,6 @@ pipeline {
             throw new Exception("Version does not correspond to SNAPSHOT, please add the -SNAPSHOT suffix in the version")
           }
           echo "Starting Build and Test..."
-          //gets the settings.xml file from Managed files where the id of the file is 54072478-e589-4704-b917-580b2c515dde
-          configFileProvider([configFile(fileId: '54072478-e589-4704-b917-580b2c515dde', targetLocation: 'settings.xml', variable: 'MAVEN_SETTINGS_XML')]) {
-            sh "mvn -s $MAVEN_SETTINGS_XML -Dmaven.test.failure.ignore clean verify"
           }
           echo "Build and Test: ${currentBuild.currentResult}"
         }
