@@ -8,7 +8,7 @@ pipeline {
   }
 
   tools {
-    maven 'M3' //defines maven tool (configured in "Global Configuration Tool -> Maven -> Maven Installations")
+    maven 'Maven3' //defines maven tool (configured in "Global Configuration Tool -> Maven -> Maven Installations")
   }
 
   stages {
