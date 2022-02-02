@@ -21,7 +21,6 @@ pipeline {
             throw new Exception("Version does not correspond to SNAPSHOT, please add the -SNAPSHOT suffix in the version")
           }
           echo "Starting Build and Test..."
-          }
           echo "Build and Test: ${currentBuild.currentResult}"
         }
       }
