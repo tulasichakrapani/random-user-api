@@ -30,8 +30,8 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 		doc:name="Configuration properties"
 		doc:id="19556f5d-992f-48bc-a332-d5568ef7e544"
 		file="config\common.properties" />
-	<api-gateway:autodiscovery apiId="${api.id}"
+	<!-- <api-gateway:autodiscovery apiId="${api.id}"
 		ignoreBasePath="true" doc:name="API Autodiscovery"
 		doc:id="2267da7f-d622-4ec3-a0bd-398b5857c14a"
-		flowRef="random-user-api-main" />
+		flowRef="random-user-api-main" /> -->
 </mule>
