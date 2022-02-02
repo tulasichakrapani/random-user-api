@@ -36,6 +36,8 @@
 						<artifact>${artifact}</artifact>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.4.0</muleVersion>
+						<username>guest_account3</username>
+						<password>B0bby@123</password>
 						<applicationName>${cloudhub.application.name}</applicationName>
 						<environment>${environment}</environment>
 						<workerType>${cloudhub.workerType}</workerType>
