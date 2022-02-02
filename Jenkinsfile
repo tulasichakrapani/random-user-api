@@ -84,8 +84,7 @@ pipeline {
 
           configFileProvider([configFile(fileId: '54072478-e589-4704-b917-580b2c515dde', targetLocation: 'settings.xml', variable: 'MAVEN_SETTINGS_XML')]) {
             // Run the maven build
-            sh ""
-            " mvn clean package deploy -DmuleDeploy -U --batch-mode -s $MAVEN_SETTINGS_XML \
+            sh """ mvn clean package deploy -DmuleDeploy \
                         -Danypoint.platform.config.analytics.agent.enabled=true \
                         -Dapp.runtime=${anypointMuleVersion}  \
                         -Dcloudhub.application.name=${applicationName} \
@@ -101,8 +100,7 @@ pipeline {
                         -DreqResourceCoverage=${reqResourceCoverage} \
                         -DreqFlowCoverage=${reqFlowCoverage} \
                         -DfailBuild=${failBuild} \
-                        -Dcloudhub.workers=${cloudhubWorkers} "
-            ""
+                        -Dcloudhub.workers=${cloudhubWorkers} """
           }
         }
       }
